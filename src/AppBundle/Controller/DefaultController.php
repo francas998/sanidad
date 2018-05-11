@@ -108,15 +108,26 @@ class DefaultController extends Controller
         $anual = $em->getRepository('AppBundle:centinela')->findAll();
         $fichero = fopen("../web/centinela/fichero_anual.txt", "a+");
         
-        fwrite($text, "Red"."\n");
+        fwrite($fichero, "Red"."\t"
+                .$fichero->getCefalea()."\t"
+                ."Centinela"."\t"
+                ."Poblacion"."\n"
+               
+                );
         
-        foreach ($anual as $fichero){
+        foreach ($anual as $anu){
             
-            fwrite($fichero, $fichero->getRed()."\t");
-            //falta población
+            fwrite($fichero, $anu->getRed()."\t"
+                    ."municipio"."\t"
+                    ."Centinela"."\t"
+                    ."poblacion"."\n"
+                    );
+            //falta  municipio
             //Medico centinela
-            //falta municipio
+            //falta población
         }
+        fclose($fichero);
+        die();
     }
     
 }

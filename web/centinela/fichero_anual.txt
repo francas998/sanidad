@@ -1,0 +1,23 @@
+Red
+
+
+Red
+Red
+nada	nose	Red
+nada	nose	
+
+
+Red
+nada	nose	
+
+Red	Municipio	Centinela	Poblacion
+nada	nose	Red	Municipio	Centinela	Poblacion
+nada	municipio	Centinela	poblacion
+nose	municipio	Centinela	poblacion
+
+
+Red	Municipio	Centinela	Poblacion
+nada	municipio	Centinela	poblacion
+nose	municipio	Centinela	poblacion
+
+
