@@ -100,4 +100,23 @@ class DefaultController extends Controller
         
     }
     
+    /**
+     * @Route("/fichero_anual", name="anual")
+     */
+    public function fichero_poblacion_anualAction(){
+        $em = $this->getDoctrine()->getManager();
+        $anual = $em->getRepository('AppBundle:centinela')->findAll();
+        $fichero = fopen("../web/centinela/fichero_anual.txt", "a+");
+        
+        fwrite($text, "Red"."\n");
+        
+        foreach ($anual as $fichero){
+            
+            fwrite($fichero, $fichero->getRed()."\t");
+            //falta población
+            //Medico centinela
+            //falta municipio
+        }
+    }
+    
 }
