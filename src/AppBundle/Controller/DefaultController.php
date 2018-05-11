@@ -26,9 +26,9 @@ class DefaultController extends Controller
         
         $em = $this->getDoctrine()->getManager();
         $centinela = $em->getRepository('AppBundle:centinela')->findAll();
-        $text = fopen("../web/centinela/Centinela.txt", "a+");
+        $text = fopen("../web/centinela/Centinela2.txt", "w");
         
-            
+            /*
             fwrite($text, "Id"."\t");
             fwrite($text, "Usuarioid"."\t");
             fwrite($text, "Creado"."\t"."\t");
@@ -59,9 +59,18 @@ class DefaultController extends Controller
             fwrite($text, "Complicaciones"."\t");
             fwrite($text, "Derivación"."\t");
             fwrite($text, "Muestra"."\n");
-
+*/
             
+        
+        
+        
+        
         foreach ($centinela as $cen){
+            
+            fwrite($text, $cen->getRed()."-".$cen->getSemana()."-".$cen->getAnyo()."-".$cen->getUsuarioid()."\n");
+            
+            
+            /*
             fwrite($text, $cen->getId()."\t");
             fwrite($text, $cen->getUsuarioid()."\t"."\t");
             $date = $cen->getCreado()->format('d/m/Y');
@@ -92,7 +101,7 @@ class DefaultController extends Controller
             fwrite($text, $cen->getObesidad()."\t");
             fwrite($text, $cen->getComplicaciones()."\t");
             fwrite($text, $cen->getDerivacion()."\t");
-            fwrite($text, $cen->getMuestra()."\n");
+            fwrite($text, $cen->getMuestra()."\n");*/
         }
         fclose($text);
         //var_dump($centinela);
