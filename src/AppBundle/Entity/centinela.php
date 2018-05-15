@@ -45,6 +45,35 @@ class centinela
     /**
      * @var int
      *
+     * @ORM\Column(name="municipio", type="string", length=255)
+     */
+    private $municipio;
+    
+     /**
+     * @var int
+     *
+     * @ORM\Column(name="poblacion", type="string", length=255)
+     */
+    private $poblacion;
+    
+    
+     /**
+     * @var string
+     *
+     * @ORM\Column(name="mc", type="string", length=255)
+     */
+    private $mc;
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     * @var int
+     *
      * @ORM\Column(name="semana", type="integer")
      */
     private $semana;
@@ -297,6 +326,8 @@ class centinela
         return $this;
     }
 
+    
+    
     /**
      * Get red
      *
@@ -307,6 +338,110 @@ class centinela
         return $this->red;
     }
 
+    
+    /**
+     * Set municipio
+     *
+     * @param int $municipio
+     *
+     * @return centinela
+     */
+    public function setMunicipio($municipio)
+    {
+        $this->municipio = $municipio;
+
+        return $this;
+    }
+
+    /**
+     * Get municipio
+     *
+     * @return int
+     */
+    public function getMunicipio()
+    {
+        return $this->municipio;
+    }
+
+ 
+    
+    
+    
+      /**
+     * Set poblacion
+     *
+     * @param int $poblacion
+     *
+     * @return centinela
+     */
+    public function setPoblacion($poblacion)
+    {
+        $this->poblacion = $poblacion;
+
+        return $this;
+    }
+
+    /**
+     * Get poblacion
+     *
+     * @return int
+     */
+    public function getPoblacion()
+    {
+        return $this->poblacion;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     * Set mc
+     *
+     * @param string $mc
+     *
+     * @return centinela
+     */
+    public function setMc($mc)
+    {
+        $this->mc = $mc;
+
+        return $this;
+    }
+
+    
+    
+    /**
+     * Get mc
+     *
+     * @return string
+     */
+    public function getMc()
+    {
+        return $this->mc;
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     /**
      * Set semana
      *
