@@ -8,7 +8,9 @@
     </div>
     <div class="col-sm">
         <h3>FICHEROS DE VIGILANCIA DE GRIPE para el SVGE</h3>
-      <a href="{{ asset('centinela/anexoa2.txt') }}" class="btn btn-info" role="button">Ver fichero .txt de población anual</a>
+        <a href="{{ asset('centinela/anexoa.txt') }}" class="btn btn-info" role="button">Ver fichero .txt población anual</a> 
+        <br>
+        <a href="{{ asset('centinela/anexob.txt') }}" class="btn btn-info" role="button">Ver fichero .txt semanal de casos</a>
     </div>
     <div class="col-sm">
       
@@ -26,25 +28,7 @@
         
         
         
-      <h1>Listado de población anual</h1>
-<table border="1">
-    <tr>
-        <th>Código Red</th>
-        <th>Municipio</th>
-        <th>Médico centinela</th>
-        <th>Población</th>
-    </tr>
-    <pre><code>
-    {# {% for centinela in centinelas %}
-    <tr>
-        <td>{{ centinela.red }}</td>
-        <td>{{ centinela.municipio }}</td>
-        <td>{{ centinela.anyo }}</td>
-        <td>{{ centinela.id_usuario }}</td>
-    </tr>
-    {% endfor %} #}
-</code></pre>
-</table> 
+
     </div>
     <div class="col-sm">
       
